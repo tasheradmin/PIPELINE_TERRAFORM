@@ -1,0 +1,18 @@
+stages:
+- stage: validate
+  jobs:
+  - job: validate
+    continueOnError: false
+    steps:
+    
+    - task: TerraformInstaller@0
+      inputs:
+        terraformVersions: 'latest'
+        
+#     - task: TerraformTaskV3@3
+#       inputs:
+#         provider: 'azurerm'
+#         command: 'init'
+#         backendServiceArm: ''
+
+# - stage: deploy
